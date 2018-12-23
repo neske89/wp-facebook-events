@@ -1,0 +1,51 @@
+.event {
+    width: 600px !important;
+    height: 375px !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex !important;
+    align-items: flex-end;
+}
+.event .start-time {
+    float:right;
+}
+
+.event .overlay {
+    color:white;
+    width: 580px !important;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 10px 10px 10px;
+    -webkit-transform: translateY(calc(100% - 60px));
+    -moz-transform: translateY(calc(100% - 60px));
+    -ms-transform: translateY(calc(100% - 60px));
+    -o-transform: translateY(calc(100% - 60px));
+    transform: translateY(calc(100% - 60px));
+    -webkit-transition: transform 0.3s, background 0.3s;
+    -moz-transition: transform 0.6s, background 0.6s;
+    -ms-transition: transform 0.6s, background 0.6s;
+    -o-transition: transform 0.6s, background 0.6s;
+    transition: transform 0.6s, background 0.6s;
+}
+.event:hover .overlay {
+    background: rgba(0,0,0,0.8);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.event.past {
+    -webkit-transition: filter 0.3s;
+    -moz-transition: filter 0.3s;
+    -ms-transition: filter 0.3s;
+    -o-transition: filter 0.3s;
+    transition: filter 0.3s;
+    filter:grayscale(100%);
+}
+.event.past:hover {
+    filter:grayscale(0);
+}
